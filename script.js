@@ -73,7 +73,8 @@ function UpdateCard(id, image, category, name, price, color){
     form["color"].value = color
 
     // ki yenzel submit 5adem el fonction 
-    form.addEventListener("click", function(){
+    btn = form.querySelector("button")
+    btn.addEventListener("click", function(){
         // 3awed jib el form bel values el jdod
         var form = document.forms['Updateform'];
         var name = form["name"].value
@@ -84,7 +85,9 @@ function UpdateCard(id, image, category, name, price, color){
         // jib el product eli 9a3ed nbadel fih
         // + a3mali card jdida 
         // + badel el innerHTML mta3 el 9dima bel innerHTML mta3 el card jdida
-        document.getElementById(id).innerHTML = ProductCard(id, image, category, name, price, color).innerHTML
+        var oldCard = document.getElementById(id)
+        var newCard = ProductCard(id, image, category, name, price, color)
+        productList.replaceChild(newCard, oldCard)
     })
 }
 
