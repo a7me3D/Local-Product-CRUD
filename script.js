@@ -84,7 +84,7 @@ function UpdateCard(id, image, category, name, price, color){
         var color = form["color"].value
         // jib el product eli 9a3ed nbadel fih
         // + a3mali card jdida 
-        // + badel el innerHTML mta3 el 9dima bel innerHTML mta3 el card jdida
+        // + badel mta3 el card jdida bel 9dima
         var oldCard = document.getElementById(id)
         var newCard = ProductCard(id, image, category, name, price, color)
         productList.replaceChild(newCard, oldCard)
